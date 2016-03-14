@@ -6,21 +6,9 @@ import java.util.Scanner;
 public class Cadastro 
 {
 	String name,email,password;
-
-	public static void main(String[] args) 
-	{
-		System.out.println("Qual tipo de usuário você pretende cadastrar ?");
-		System.out.println("1 - Pessoa Comum");
-		System.out.println("2 - Pessoa Jurídica (empresa)");
-		Scanner leituraOpcao = new Scanner(System.in);
-		int opcao = leituraOpcao.nextInt();
-		
-		
-		switch(opcao) 
+	
+		public void cadastrarPessoa()
 		{
-		
-		case 1:
-			
 			UsuarioComum pessoa = new UsuarioComum();
 			Scanner leituraPessoa = new Scanner(System.in);
 			ArrayList<UsuarioComum> listaPessoa = new ArrayList<UsuarioComum>();
@@ -32,18 +20,20 @@ public class Cadastro
 			pessoa.sobrenome = leituraPessoa.nextLine();
 			
 			System.out.print("digite seu email: ");
-			pessoa.name = leituraPessoa.nextLine();
+			pessoa.email = leituraPessoa.nextLine();
 			
 			System.out.print("digite sua senha: ");
-			pessoa.sobrenome = leituraPessoa.nextLine();
+			pessoa.password = leituraPessoa.nextLine();
 			
 			listaPessoa.add(pessoa);
-			System.out.print(listaPessoa);
+			System.out.println(listaPessoa);
 			
-			break;
-
-		case 2:
 			
+		}
+		
+	
+		public void cadastrarEmpresa()
+		{
 			Empresa empresa = new Empresa();
 			Scanner leituraEmpresa = new Scanner(System.in);
 			ArrayList<Empresa> listaEmpresa = new ArrayList<Empresa>();
@@ -74,16 +64,7 @@ public class Cadastro
 			
 			listaEmpresa.add(empresa);
 			System.out.println(listaEmpresa);
-			
-			break;
-			
-		default:
-			
-			System.out.println("Opcao invalida");
-			
-			break;
-		}
+	}
 
 	}
 
-}
