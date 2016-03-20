@@ -36,7 +36,7 @@ import java.util.Scanner;
 				System.out.println("1 - Pessoa Comum");
 				System.out.println("2 - Pessoa Jurídica (empresa)");
 				Scanner leituraOpcao = new Scanner(System.in);
-				int opcao = leituraOpcao.nextInt();
+				byte opcao = leituraOpcao.nextByte();
 				
 				if(opcao == 1)
 				{
