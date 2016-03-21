@@ -5,24 +5,31 @@ import java.util.Scanner;
 
 public class Cadastro 
 {
-	String name,email,password;
+	String name, cpf, email,password;
 	
 		public void cadastrarPessoa()
 		{
+			
 			UsuarioComum pessoa = new UsuarioComum();
 			Scanner leituraPessoa = new Scanner(System.in);
 			ArrayList<UsuarioComum> listaPessoa = new ArrayList<UsuarioComum>();
 			
-			System.out.print("digite seu nome: ");
+			System.out.print("Nome Completo: ");
 			pessoa.name = leituraPessoa.nextLine();
 			
-			System.out.print("digite seu sobrenome: ");
-			pessoa.sobrenome = leituraPessoa.nextLine();
-			
-			System.out.print("digite seu email: ");
+			System.out.print("CPF: ");
+				pessoa.cpf = leituraPessoa.nextLine();
+				//validação do CPF, precisa testar!!!
+				if(ValidarCPF.isCPF(cpf) != true)
+					do {
+						System.out.printf("Erro, CPF invalido! Tente novamente\n");
+						pessoa.cpf = leituraPessoa.nextLine();
+					} while (ValidarCPF.isCPF(cpf) != true);
+				
+			System.out.print("E-mail: ");
 			pessoa.email = leituraPessoa.nextLine();
 			
-			System.out.print("digite sua senha: ");
+			System.out.print("Senha: ");
 			pessoa.password = leituraPessoa.nextLine();
 			
 			listaPessoa.add(pessoa);
@@ -51,7 +58,12 @@ public class Cadastro
 			empresa.telefone = leituraEmpresa.nextLine();
 			
 			System.out.print("digite o cnpj da empresa: ");
-			empresa.cnpj = leituraEmpresa.nextLine();
+			//testar também, alguém tem um cnpj aí?
+				if(ValidarCNPJ.isCNPJ(cpf) != true)
+					do {
+						System.out.printf("Erro, CNPJ invalido! Tente novamente\n");
+						empresa.cpf = leituraEmpresa.nextLine();
+					} while (ValidarCNPJ.isCNPJ(cpf) != true);
 			
 			System.out.print("digite o site da empresa: ");
 			empresa.siteEmpresa = leituraEmpresa.nextLine();

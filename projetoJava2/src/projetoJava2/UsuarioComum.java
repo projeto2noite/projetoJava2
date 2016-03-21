@@ -1,23 +1,20 @@
 package projetoJava2;
 
-//nao ta imprimindo nome e sobrenome 
-//acho que e problema do tamanho da lista
 
 
 public class UsuarioComum extends Cadastro
 {
-	String sobrenome;
+	String cpf;
 	
 	public String getNome()
 	{
 		return name;
 	}
 	
-	public String getSobrenome()
-	{
-		return sobrenome;
+	public String getCPF()
+	{	
+		return cpf;
 	}
-	
 	public String getEmail()
 	{
 		return email;
@@ -33,9 +30,9 @@ public class UsuarioComum extends Cadastro
 		this.name = name;
 	}
 	
-	public void setSobrenome(String sobrenome)
+	public void setCPF(String cpf)
 	{
-		this.sobrenome = sobrenome;
+		this.cpf = cpf;
 	}
 	
 	public void setEmail(String email)
@@ -50,7 +47,7 @@ public class UsuarioComum extends Cadastro
 	
 	public String toString()
 	{ 
-		return email +" "+password +" "+name+" "+sobrenome;
+		return email +" "+password +" "+name+" "+cpf;
 	}
 	
 
