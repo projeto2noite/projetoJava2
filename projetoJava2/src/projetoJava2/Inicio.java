@@ -23,11 +23,11 @@ import java.util.Scanner;
 			
 			switch (opcaoEscolhida) {
 			case 1:
-				//incluir método/classe de entrada
+				EntradaDeMaterial entradaMaterial = new EntradaDeMaterial();
 				break;
 				
 			case 2:
-				//incluir método/classe de saída
+				SaidaDeMaterial saidaMaterial = new SaidaDeMaterial();
 				break;
 				
 			case 3:
@@ -36,7 +36,7 @@ import java.util.Scanner;
 				System.out.println("1 - Pessoa Comum");
 				System.out.println("2 - Pessoa Jurídica (empresa)");
 				Scanner leituraOpcao = new Scanner(System.in);
-				int opcao = leituraOpcao.nextInt();
+				byte opcao = leituraOpcao.nextByte();
 				
 				if(opcao == 1)
 				{
@@ -49,11 +49,11 @@ import java.util.Scanner;
 				break;
 				
 			case 4:
-				//incluir método/classe de pequisa
+				//incluir método/classe de pequisa (precisa do banco)
 				break;
 				
 			case 5:
-				//incluir método/classe de relatórios
+				//incluir método/classe de relatórios (precisa do banco)
 				break;
 				
 			case 6:
