@@ -3,17 +3,20 @@ package projetoJava2;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import usuarios.Empresa;
+import usuarios.UsuarioComum;
+
 public class Cadastro 
 {
-<<<<<<< HEAD
+
 	protected String name;
 	protected String email;
 	protected String password;
+	protected long cpf;
 	private Scanner leituraPessoa;
 	private Scanner leituraEmpresa;
-=======
-	String name, cpf, email,password;
->>>>>>> 486a111b88a472306bb8a6f171a960384e65afbf
+
+
 	
 		public void cadastrarPessoa()
 		{
@@ -26,7 +29,7 @@ public class Cadastro
 			pessoa.name = leituraPessoa.next();
 			
 			System.out.print("CPF: ");
-				pessoa.cpf = leituraPessoa.next();
+				pessoa.cpf = leituraPessoa.nextLong();
 				//validação do CPF, precisa testar!!!
 				//if(ValidarCPF.isCPF(cpf) != true)
 					//do {
@@ -60,7 +63,7 @@ public class Cadastro
 			empresa.endereco = leituraEmpresa.nextLine();
 			
 			System.out.print("digite o cnpj da empresa: ");
-			empresa.cpf = leituraEmpresa.nextLine();
+			empresa.cnpj = leituraEmpresa.nextLong();
 			//testar também, alguém tem um cnpj aí?
 				//if(ValidarCNPJ.isCNPJ(cpf) != true)
 					//do {
@@ -69,19 +72,19 @@ public class Cadastro
 					//} while (ValidarCNPJ.isCNPJ(cpf) != true);
 			
 			System.out.print("digite o email da empresa: ");
-			empresa.email = leituraEmpresa.nextLine();
+			empresa.email = leituraEmpresa.next();
 			
 			System.out.print("digite o telefone da empresa: ");
-			empresa.telefone = leituraEmpresa.nextLine();
+			empresa.telefone = leituraEmpresa.nextLong();
 			
 			System.out.print("digite o site da empresa: ");
-			empresa.siteEmpresa = leituraEmpresa.nextLine();
+			empresa.siteEmpresa = leituraEmpresa.next();
 			
 			System.out.print("digite seu login: ");
-			empresa.login = leituraEmpresa.nextLine();
+			empresa.login = leituraEmpresa.next();
 			
 			System.out.print("digite sua senha: ");
-			empresa.password = leituraEmpresa.nextLine();
+			empresa.password = leituraEmpresa.next();
 			
 			listaEmpresa.add(empresa);
 			System.out.println(listaEmpresa);

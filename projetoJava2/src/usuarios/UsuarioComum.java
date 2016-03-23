@@ -1,21 +1,19 @@
-package projetoJava2;
+package usuarios;
 
-
+import projetoJava2.Cadastro;
 
 public class UsuarioComum extends Cadastro
 {
-<<<<<<< HEAD
+	
 	public String sobrenome;
-=======
-	String cpf;
->>>>>>> 486a111b88a472306bb8a6f171a960384e65afbf
+
 	
 	public String getNome()
 	{
 		return name;
 	}
 	
-	public String getCPF()
+	public long getCPF()
 	{	
 		return cpf;
 	}
@@ -34,7 +32,7 @@ public class UsuarioComum extends Cadastro
 		this.name = name;
 	}
 	
-	public void setCPF(String cpf)
+	public void setCPF(long cpf)
 	{
 		this.cpf = cpf;
 	}

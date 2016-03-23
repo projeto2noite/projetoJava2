@@ -1,8 +1,11 @@
-package projetoJava2;
+package usuarios;
+
+import projetoJava2.Cadastro;
 
 public class Empresa extends Cadastro
 {
-	public String endereco, cnpj, telefone, siteEmpresa,login;
+	public String endereco, siteEmpresa,login;
+	public long cnpj, telefone;
 	
 	public String getNome()
 	{
@@ -13,12 +16,12 @@ public class Empresa extends Cadastro
 		return endereco;
 	}
 	
-	public String getCnpj()
+	public long getCnpj()
 	{
 		return cnpj;
 	}
 	
-	public String getPhone()
+	public long getPhone()
 	{
 		return telefone;
 	}
@@ -53,12 +56,12 @@ public class Empresa extends Cadastro
 		this.endereco = endereco;
 	}
 	
-	public void setCnpj(String cnpj)
+	public void setCnpj(long cnpj)
 	{
 		this.cnpj = cnpj;
 	}
 	
-	public void setPhone(String telefone)
+	public void setPhone(long telefone)
 	{
 		this.telefone = telefone;
 	}
