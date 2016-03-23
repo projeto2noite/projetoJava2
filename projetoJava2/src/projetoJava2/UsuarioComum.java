@@ -6,7 +6,7 @@ package projetoJava2;
 
 public class UsuarioComum extends Cadastro
 {
-	String sobrenome;
+	public String sobrenome;
 	
 	public String getNome()
 	{

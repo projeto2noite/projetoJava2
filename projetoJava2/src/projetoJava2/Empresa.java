@@ -1,11 +1,8 @@
 package projetoJava2;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Empresa extends Cadastro
 {
-	String endereco, cnpj, telefone, siteEmpresa,login;
+	public String endereco, cnpj, telefone, siteEmpresa,login;
 	
 	public String getNome()
 	{
@@ -86,23 +83,23 @@ public class Empresa extends Cadastro
 		this.password = password;
 	}
 	
-	public void listarEmpresa()
+	/*public void listarEmpresa()
 	{
 		Empresa empresa = new Empresa();
 		Scanner leituraEmpresa = new Scanner(System.in);
 		ArrayList<Empresa> ListaEmpresas = new ArrayList<Empresa>();
 		
-		/*for(int i = 0; i < ListaEmpresas.length; i++)
+		for(int i = 0; i < ListaEmpresas.length; i++)
 		{
 			System.out.println(empresa.name);
-		} */
+		} 
 		//criar lista array list
 		//inserir nomes das empresas nessa lista
 		//empresa.listarEmpresas
 		//imprimir lista
 		//listarEmpresa.add(empresa)
 		
-	}
+	} */
 	public String toString()
 	{
 		return name+" "+login+" "+endereco+" "+cnpj+" "+telefone+" "+email+" "+siteEmpresa;

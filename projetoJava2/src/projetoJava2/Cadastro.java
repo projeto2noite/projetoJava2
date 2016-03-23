@@ -5,12 +5,16 @@ import java.util.Scanner;
 
 public class Cadastro 
 {
-	String name,email,password;
+	protected String name;
+	protected String email;
+	protected String password;
+	private Scanner leituraPessoa;
+	private Scanner leituraEmpresa;
 	
 		public void cadastrarPessoa()
 		{
 			UsuarioComum pessoa = new UsuarioComum();
-			Scanner leituraPessoa = new Scanner(System.in);
+			leituraPessoa = new Scanner(System.in);
 			ArrayList<UsuarioComum> listaPessoa = new ArrayList<UsuarioComum>();
 			
 			System.out.print("digite seu nome: ");
@@ -35,7 +39,7 @@ public class Cadastro
 		public void cadastrarEmpresa()
 		{
 			Empresa empresa = new Empresa();
-			Scanner leituraEmpresa = new Scanner(System.in);
+			leituraEmpresa = new Scanner(System.in);
 			ArrayList<Empresa> listaEmpresa = new ArrayList<Empresa>();
 			
 			System.out.print("digite o nome da empresa: ");
