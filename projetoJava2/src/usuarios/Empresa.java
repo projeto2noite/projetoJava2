@@ -5,7 +5,8 @@ import projetoJava2.Cadastro;
 public class Empresa extends Cadastro
 {
 	public String endereco, siteEmpresa,login;
-	public long cnpj, telefone;
+	public String cnpj;
+	public long telefone;
 	
 	public String getNome()
 	{
@@ -16,7 +17,7 @@ public class Empresa extends Cadastro
 		return endereco;
 	}
 	
-	public long getCnpj()
+	public String getCnpj()
 	{
 		return cnpj;
 	}
@@ -56,7 +57,7 @@ public class Empresa extends Cadastro
 		this.endereco = endereco;
 	}
 	
-	public void setCnpj(long cnpj)
+	public void setCnpj(String cnpj)
 	{
 		this.cnpj = cnpj;
 	}

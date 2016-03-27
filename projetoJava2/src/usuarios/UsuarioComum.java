@@ -13,9 +13,9 @@ public class UsuarioComum extends Cadastro
 		return name;
 	}
 	
-	public long getCPF()
+	public String getCPF()
 	{	
-		return cpf;
+		return CPF;
 	}
 	public String getEmail()
 	{
@@ -32,9 +32,9 @@ public class UsuarioComum extends Cadastro
 		this.name = name;
 	}
 	
-	public void setCPF(long cpf)
+	public void setCPF(String CPF)
 	{
-		this.cpf = cpf;
+		this.CPF = CPF;
 	}
 	
 	public void setEmail(String email)
@@ -49,7 +49,7 @@ public class UsuarioComum extends Cadastro
 	
 	public String toString()
 	{ 
-		return email +" "+password +" "+name+" "+cpf;
+		return email +" "+password +" "+name+" "+CPF;
 	}
 	
 

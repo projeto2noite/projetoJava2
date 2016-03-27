@@ -5,11 +5,11 @@ import java.util.Scanner;
 		
 		public static void menu () {
 			System.out.println("Pressione:");
-			System.out.println("1 - Para Entrada de material reciclável");
-			System.out.println("2 - Para Saída de material reciclável");
+			System.out.println("1 - Para Entrada de material reciclavel");
+			System.out.println("2 - Para Saida de material reciclavel");
 			System.out.println("3 - Para Cadastros");
 			System.out.println("4 - Para pesquisas");
-			System.out.println("5 - Para relatório de movimentação");
+			System.out.println("5 - Para relatorio de movimentacao");
 			System.out.println("6 - Para sair");
 		}
 		
@@ -32,9 +32,9 @@ import java.util.Scanner;
 				
 			case 3:
 				Cadastro cadastro = new Cadastro();
-				System.out.println("Qual tipo de usuário você pretende cadastrar ?");
+				System.out.println("Qual tipo de usuario voce pretende cadastrar ?");
 				System.out.println("1 - Pessoa Comum");
-				System.out.println("2 - Pessoa Jurídica (empresa)");
+				System.out.println("2 - Pessoa Juridica (empresa)");
 				Scanner leituraOpcao = new Scanner(System.in);
 				byte opcao = leituraOpcao.nextByte();
 				
@@ -49,11 +49,11 @@ import java.util.Scanner;
 				break;
 				
 			case 4:
-				//incluir método/classe de pequisa (precisa do banco)
+				//incluir metodo/classe de pequisa (precisa do banco)
 				break;
 				
 			case 5:
-				//incluir método/classe de relatórios (precisa do banco)
+				//incluir metodo/classe de relatorios (precisa do banco)
 				break;
 				
 			case 6:

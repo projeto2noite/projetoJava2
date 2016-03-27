@@ -1,4 +1,4 @@
-package projetoJava2;
+package bancoDeDados;
 import java.sql.*;
 
 public class ConexaoBanco

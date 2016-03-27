@@ -12,7 +12,7 @@ public class Cadastro
 	protected String name;
 	protected String email;
 	protected String password;
-	protected long cpf;
+	protected String CPF;
 	private Scanner leituraPessoa;
 	private Scanner leituraEmpresa;
 
@@ -29,14 +29,15 @@ public class Cadastro
 			pessoa.name = leituraPessoa.next();
 			
 			System.out.print("CPF: ");
-				pessoa.cpf = leituraPessoa.nextLong();
-				//validação do CPF, precisa testar!!!
-				//if(ValidarCPF.isCPF(cpf) != true)
-					//do {
-					//	System.out.printf("Erro, CPF invalido! Tente novamente\n");
-					//	pessoa.cpf = leituraPessoa.next();
-					//} while (ValidarCPF.isCPF(cpf) != true);
-				
+			pessoa.CPF = leituraPessoa.next();
+				//validaÃ§ao do CPF, precisa fazer mais testes!!!
+                if(CNP.isValidCPF(pessoa.CPF) != true) {
+                    do {
+                        System.out.printf("Erro, CPF invalido! Tente novamente\n");
+                        pessoa.CPF = leituraPessoa.next();
+                    } while (CNP.isValidCPF(pessoa.CPF) != true);
+				}
+			
 			System.out.print("E-mail: ");
 			pessoa.email = leituraPessoa.next();
 			
@@ -63,13 +64,15 @@ public class Cadastro
 			empresa.endereco = leituraEmpresa.nextLine();
 			
 			System.out.print("digite o cnpj da empresa: ");
-			empresa.cnpj = leituraEmpresa.nextLong();
-			//testar também, alguém tem um cnpj aí?
-				//if(ValidarCNPJ.isCNPJ(cpf) != true)
-					//do {
-					//	System.out.printf("Erro, CNPJ invalido! Tente novamente\n");
-					//	empresa.cpf = leituraEmpresa.nextLine();
-					//} while (ValidarCNPJ.isCNPJ(cpf) != true);
+			empresa.cnpj = leituraEmpresa.next();
+			//testar tambem, alguem tem um cnpj ai?
+			// NAO CONSEGUI COLOCAR CNPJ COMO PROTECTED, DA ERRO :(
+			if(CNP.isValidCNPJ(empresa.cnpj) != true) {
+                do {
+                    System.out.printf("Erro, CPF invalido! Tente novamente\n");
+                    empresa.cnpj = leituraPessoa.next();
+                } while (CNP.isValidCPF(empresa.cnpj) != true);
+			}
 			
 			System.out.print("digite o email da empresa: ");
 			empresa.email = leituraEmpresa.next();
